@@ -1,0 +1,564 @@
+*{
+    transition: all 0.5s linear;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    border: none;
+    outline: none;
+}
+
+html{
+    font-size: 50%;
+}
+
+::selection{
+    color: #0077ff;
+}
+
+.content{
+    position: relative;
+    width: 80%;
+    height: 90vh;
+    margin: auto;
+    margin-top: 30px;
+    background: linear-gradient(to left, #00ffea , #0084ff);
+    border-radius: 10px;
+    box-shadow: 30px 25px 5px #ff00b3;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    font-size: 25px;
+    gap: 10px;
+    color: #ff00b3;
+}
+
+.text h3{
+    background: linear-gradient(to left, #ff00b3, #0077ff);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.text span{
+    color: #fff;
+    font-size: 15px;
+    background: linear-gradient(to left, #ff00b3, #0077ff);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.inputs-number{
+    width: 100px;
+    margin: 20px;
+}
+
+input{
+    width: 300px;
+    height: 35px;
+    margin: 5px;
+    border-radius: 5px;
+    background: linear-gradient(to left, #ff00b3, #0077ff);
+    color: #fff;
+}
+
+input::placeholder{
+    color: #fff;
+    padding-left: 5px;
+}
+
+input:focus{
+    transform: scale(1.1);
+    box-shadow: 5px 1px 2px #ff00b3;
+}
+
+.result{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+    float: right;
+    margin: 10px;
+}
+
+.result h3{
+    position: absolute;
+    right: 10px;
+}
+
+.result strong{
+    font-size: 30px;
+    background: linear-gradient(to left, #ff00aa, #0077ff);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.rr{
+    flex-direction: column;
+    display: flex;
+    float: right;
+    margin-top: 50px;
+}
+
+.rr div{
+    margin: 2px;
+    min-width: 250px;
+    height: 40px;
+}
+
+.good{
+    display: none;
+    width: 100%;
+    height: 100vh;
+}
+
+.good.action{
+    display: none;
+    animation: action 0.5s both linear;
+}
+
+.good h3{
+    color: #00ff22;
+    font-size: 50px;
+    text-align: center;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+@keyframes action{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    50%{
+        opacity: 0.5;
+        transform: translateX(-50px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.stages{
+    width: 40%;
+    position: absolute;
+    bottom: 20px;
+    margin: 10px;
+    padding: 10px;
+    background: #ff00aa;
+    border-radius: 10px;
+    box-shadow: 20px 15px 3px #ff00b3;
+    border: 1px solid rgba(255, 255, 255, 0.493);
+}
+
+.stages h3{
+    font-size: 28px;
+    text-align: center;
+    color: #00ff22;
+    transition: none;
+}
+
+.stages p{
+    font-size: 18px;
+    text-align: center;
+    color: #00ff22;
+    transition: none;
+}
+
+
+#ResultDaye::after{
+    content: ": عدد الايام";
+    background: linear-gradient(to left, #ff00b3, #0077ff);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    position: absolute;
+    right: 0;
+}
+
+#ResultMonths::after{
+    content: " : عدد الاشهر";
+    background: linear-gradient(to left, #ff00b3, #0077ff);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    position: absolute;
+    right: 0;
+}
+
+#ResultWeeks::after{
+    content: " : عدد الاسابيع";
+    background: linear-gradient(to left, #ff00b3, #0077ff);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    position: absolute;
+    right: 0;
+}
+
+#ResultHours::after{
+    content: " : عدد الساعات";
+    background: linear-gradient(to left, #ff00b3, #0077ff);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    position: absolute;
+    right: 0;
+}
+
+#ResultMinutes::after{
+    content: " : عدد الدقائق";
+    background: linear-gradient(to left, #ff00b3, #0077ff);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    position: absolute;
+    right: 0;
+}
+
+#ResultSeconds::after{
+    content: " : عدد الثواني";
+    background: linear-gradient(to left, #ff00b3, #0077ff);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    position: absolute;
+    right: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:400px){
+    html{
+        font-size: 30%;
+    }
+
+    .content{
+        width: 90%;
+        height: 100vh;
+        margin-top: 10px;
+        box-shadow: 10px 5px 5px #ff00b3;
+    }
+
+    .text{
+        padding-top: 15px;
+        margin-bottom: 15px;
+        font-size: 18px;
+    }
+    
+    .text span{
+        color: #fff;
+        font-size: 12px;
+    }
+
+    .inputs-number{
+        width: 100%;
+        margin: 10px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    input{
+        width: 200px;
+        height: 28px;
+        margin: 3px;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    .result{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        font-size: 25px;
+        float: right;
+        margin: 10px;
+    }
+    
+    .result h3{
+        position: absolute;
+        right: 10px;
+        font-size: 18px;
+    }
+
+    .result strong{
+        font-size: 18px;
+    }
+
+    .rr{
+        margin-top: 50px;
+    }
+    
+    .rr div{
+        margin: 2px;
+        min-width: 150px;
+        height: 20px;
+        font-size: 15px;
+    }
+
+    .good h3{
+        font-size: 20px;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+
+    .stages{
+        width: 90%;
+        margin: 3px;
+        padding: 3px;
+        box-shadow: 15px 10px 3px #ff00b3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    .stages h3{
+        font-size: 15px;
+    }
+    
+    .stages p{
+        font-size: 10px;
+    }
+    
+}
+
+
+
+@media (min-width:401px) and (max-width:700px){
+    html{
+        font-size: 45%;
+    }
+
+    .content{
+        width: 90%;
+        height: 100vh;
+        margin-top: 10px;
+        box-shadow: 20px 15px 5px #ff00b3;
+    }
+
+    .text{
+        padding-top: 25px;
+        margin-bottom: 15px;
+        font-size: 28px;
+    }
+    
+    .text span{
+        color: #fff;
+        font-size: 19px;
+    }
+
+    .inputs-number{
+        width: 100%;
+        margin: 10px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    input{
+        width: 300px;
+        height: 32px;
+        margin: 3px;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    .result{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        font-size: 30px;
+        float: right;
+        margin: 10px;
+    }
+    
+    .result h3{
+        position: absolute;
+        right: 10px;
+        font-size: 30px;
+    }
+
+    .result strong{
+        font-size: 35px;
+    }
+
+    .rr{
+        margin-top: 60px;
+    }
+    
+    .rr div{
+        margin: 2px;
+        min-width: 210px;
+        height: 20px;
+        font-size: 28px;
+    }
+
+    .good h3{
+        font-size: 30px;
+        margin-left: 20px;
+        margin-top: 50px;
+    }
+
+    .stages{
+        width: 95%;
+        text-align: center;
+        margin: 3px;
+        padding: 3px;
+        box-shadow: 15px 10px 3px #ff00b3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    .stages h3{
+        font-size: 30px;
+    }
+    
+    .stages p{
+        font-size: 18px;
+    }
+}
+
+@media (min-width:701px) and (max-width:1000px){
+    html{
+        font-size: 50%;
+    }
+
+    .content{
+        width: 90%;
+        height: 100vh;
+        margin-top: 10px;
+        box-shadow: 25px 20px 5px #ff00b3;
+    }
+
+    .text{
+        padding-top: 15px;
+        margin-bottom: 15px;
+        font-size: 20px;
+    }
+    
+    .text span{
+        color: #fff;
+        font-size: 15px;
+    }
+
+    .inputs-number{
+        width: 100%;
+        margin: 10px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    input{
+        width: 250px;
+        height: 28px;
+        margin: 3px;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    .result{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        font-size: 30px;
+        float: right;
+        margin: 10px;
+    }
+    
+    .result h3{
+        position: absolute;
+        right: 10px;
+        font-size: 18px;
+    }
+
+    .result strong{
+        font-size: 20px;
+    }
+
+    .rr{
+        margin-top: 50px;
+    }
+    
+    .rr div{
+        margin: 2px;
+        min-width: 250px;
+        height: 20px;
+        font-size: 20px;
+    }
+
+    .good h3{
+        font-size: 30px;
+        margin-left: 20px;
+        margin-top: 50px;
+    }
+
+    .stages{
+        width: 95%;
+        text-align: center;
+        margin: 3px;
+        padding: 3px;
+        box-shadow: 15px 10px 3px #ff00b3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    .stages h3{
+        font-size: 20px;
+    }
+    
+    .stages p{
+        font-size: 17px;
+    }
+}
