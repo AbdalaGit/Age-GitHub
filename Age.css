@@ -162,14 +162,14 @@ input:focus{
 .stages h3{
     font-size: 28px;
     text-align: center;
-    color: #00ff22;
+    color: #fff;
     transition: none;
 }
 
 .stages p{
     font-size: 18px;
     text-align: center;
-    color: #00ff22;
+    color: #fff;
     transition: none;
 }
 
